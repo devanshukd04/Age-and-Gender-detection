@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Face Mask Detection</title>
+  <link rel="stylesheet" href='/static/style1.css' />
+</head>
+
+<body style="
+      background-image: url(/static/img.jpg);
+      background-position-y: center;
+      background-position-x: right;
+      background-size: cover;
+    ">
+  <marquee>This is our first official website for age and gender Detection
+  </marquee>
+  <div class="hero">
+    <div class="content">
+      <p>Welcome</p>
+      <h1>Age and Gender <br />Detection</h1>
+    </div>
+  </div>
+
+
+  <div class="fileUploadbtn">
+    <h2>Upload</h2>
+    <div class="fileUpload">
+      <div class="box3">
+        <form action="http://localhost:5000/uploader" method="POST" enctype="multipart/form-data">
+          <input type="file" name="file" />
+          <input type="submit" />
+        </form action>
+      </div>
+      <div class="box4">
+        <form action="http://localhost:5000/camera" method="POST" enctype="multipart/form-data">
+          <input type="submit" , value="Start Camera" />
+        </form action>
+      </div>
+    </div>
+  </div>
+  </br>
+  <div >
+    {% if name %}
+    <h2>Your Gender is {{name}}</h2>
+    {% endif %}
+    {% if a %}
+    <h2>Your Age is {{a}}</h2>
+    {% endif %}
+  </div>
+  <footer>
+    <p>Author: Devanshu Dalal<br />
+      <a href="mailto:devanshukd27@gmail.com">devanshukd27@gmail.com</a>
+    </p>
+  </footer>
+</body>
+
+</html>
